@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --black:#111111;
+  --cream:#F1F0EC;
+  --peri:#7C83FF;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--black)}
+body{
+  color:var(--cream);
+  font-family:"Inter",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+.mbm-page,.container{
+  width:min(100% - 28px,620px);
+  margin:0 auto;
+  padding:34px 0 42px;
+  text-align:center;
+}
+
+.mbm-rule{
+  width:100%;
+  height:5px;
+  margin:0 0 26px;
+  background:var(--peri);
+}
+.mbm-rule-bottom{margin:30px 0 0}
+
+.mbm-kicker,.container::before{
+  content:"MANAGED BY MELS";
+  display:block;
+  margin:0 0 32px;
+  color:var(--cream);
+  font-size:.86rem;
+  font-weight:700;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+}
+
+.mbm-photo-wrap{
+  display:block;
+  width:166px;
+  height:166px;
+  margin:0 auto 28px;
+  cursor:pointer;
+}
+
+.mbm-photo-wrap img,.rounded-avatar{
+  display:block!important;
+  width:166px!important;
+  height:166px!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  border:5px solid var(--peri)!important;
+  border-radius:50%!important;
+  background:var(--cream);
+  box-shadow:none!important;
+}
+.mbm-photo-input{display:none}
+
+h1,.mbm-page h1{
+  margin:0 0 25px!important;
+  color:var(--cream)!important;
+  font-family:"Inter",Arial,sans-serif!important;
+  font-size:clamp(2.2rem,7.4vw,3.25rem)!important;
+  font-style:normal!important;
+  font-weight:700!important;
+  line-height:1.06!important;
+  letter-spacing:-.05em!important;
+  text-align:center!important;
+  text-transform:none!important;
+}
+h1 span{font-weight:400}
+
+.mbm-bio,.container p{
+  width:min(100%,545px);
+  margin:0 auto 34px!important;
+  color:var(--cream)!important;
+  font-size:clamp(1rem,3.4vw,1.16rem)!important;
+  font-weight:400!important;
+  line-height:1.52!important;
+  text-align:center!important;
+}
+
+.mbm-links{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  width:min(100%,540px);
+  margin:0 auto;
+}
+
+.mbm-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:70px;
+  padding:14px 24px;
+  border:0;
+  border-radius:28px;
+  background:var(--peri);
+  color:var(--black);
+  text-decoration:none;
+  font-size:1.05rem;
+  font-weight:750;
+}
+.mbm-link span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+}
+.mbm-link svg{width:27px;height:27px;stroke-width:2.2}
+
+.mbm-photo-note{
+  margin:16px 0 0!important;
+  color:rgba(241,240,236,.55)!important;
+  font-size:.72rem!important;
+}
+
+/* LinkStack native buttons */
+.button,a.button,button,[class*="button-"].button{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:min(100%,540px)!important;
+  min-height:70px!important;
+  margin:0 auto 14px!important;
+  padding:14px 48px!important;
+  border:0!important;
+  border-radius:28px!important;
+  background:#7C83FF!important;
+  background-image:none!important;
+  box-shadow:none!important;
+  color:#111111!important;
+  font-family:"Inter",Arial,sans-serif!important;
+  font-size:1.05rem!important;
+  font-style:normal!important;
+  font-weight:750!important;
+  text-align:center!important;
+  text-decoration:none!important;
+  filter:none!important;
+}
+.button::before,.button::after,a.button::before,a.button::after{content:none!important}
+
+.icon{
+  position:static!important;
+  width:27px!important;
+  height:27px!important;
+  margin:0 18px 0 0!important;
+  padding:0!important;
+}
+
+.social-icon-div{display:none!important}
+
+@media(max-width:480px){
+  .mbm-page,.container{width:min(100% - 24px,620px);padding-top:28px}
+  .mbm-rule{height:4px;margin-bottom:22px}
+  .mbm-kicker,.container::before{margin-bottom:26px;font-size:.74rem;letter-spacing:.31em}
+  .mbm-photo-wrap,.mbm-photo-wrap img,.rounded-avatar{width:148px!important;height:148px!important}
+  .mbm-photo-wrap{margin-bottom:24px}
+  .mbm-links{gap:12px}
+  .mbm-link,.button,a.button,button,[class*="button-"].button{
+    min-height:64px!important;
+    border-radius:24px!important;
+    font-size:1rem!important;
+  }
+}

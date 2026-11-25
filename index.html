@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111111">
+<title>Managed by Mels</title>
+<link rel="stylesheet" href="skeleton-auto.css">
+<link rel="stylesheet" href="brands.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<main class="mbm-page">
+  <div class="mbm-rule"></div>
+  <div class="mbm-kicker">MANAGED BY MELS</div>
+
+  <label class="mbm-photo-wrap" for="photoPicker">
+    <img id="profilePhoto" src="profile-placeholder.svg" alt="Profile photo">
+  </label>
+  <input id="photoPicker" class="mbm-photo-input" type="file" accept="image/*">
+
+  <h1>Melissa Nhau <span>|</span><br>Talent Manager</h1>
+
+  <p class="mbm-bio">
+    Independent talent management for underrepresented creatives in sport,
+    lifestyle and literacy. Brands, book a creator. Creators, book a call
+  </p>
+
+  <nav class="mbm-links">
+    <a class="mbm-link" href="#"><span><i data-lucide="instagram"></i>Instagram</span></a>
+    <a class="mbm-link" href="#"><span><i data-lucide="linkedin"></i>LinkedIn</span></a>
+    <a class="mbm-link" href="#"><span><i data-lucide="external-link"></i>Meet with Me</span></a>
+    <a class="mbm-link" href="#"><span><i data-lucide="mail"></i>Email</span></a>
+    <a class="mbm-link" href="#"><span><i data-lucide="music-2"></i>TikTok</span></a>
+    <a class="mbm-link" href="#"><span><i data-lucide="file-text"></i>Dissertation Research Form</span></a>
+  </nav>
+
+  <div class="mbm-rule mbm-rule-bottom"></div>
+  <p class="mbm-photo-note">Tap the profile photo to preview another image.</p>
+</main>
+
+<script>
+lucide.createIcons();
+const picker = document.getElementById('photoPicker');
+const image = document.getElementById('profilePhoto');
+picker.addEventListener('change', e => {
+  const file = e.target.files && e.target.files[0];
+  if (file) image.src = URL.createObjectURL(file);
+});
+</script>
+</body>
+</html>

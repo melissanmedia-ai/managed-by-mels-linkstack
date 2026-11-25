@@ -1,0 +1,7 @@
+/* lock all LinkStack buttons to the approved periwinkle style */
+.button,a.button,button,[class*="button-"].button{
+  background:#7C83FF!important;
+  background-image:none!important;
+  color:#111111!important;
+  border-color:transparent!important;
+}
